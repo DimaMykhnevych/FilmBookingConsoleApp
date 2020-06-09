@@ -1,6 +1,7 @@
 ﻿using CinemaPoster.Entities;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Xml.Linq;
 
@@ -85,7 +86,7 @@ namespace CinemaPoster.Repository
                 movies.Add(film);
             }
             XElement date = new XElement("date");
-            date.Add(new XAttribute("value", Convert.ToString(dateEvent.FilmSchedule).Substring(0, 10)));/*$"{dateEvent.FilmSchedule}"*/
+            date.Add(new XAttribute("value", Convert.ToString(dateEvent.FilmSchedule).Substring(0, 10)));
             date.Add(movies);
             return date;
         }
@@ -98,7 +99,7 @@ namespace CinemaPoster.Repository
             {
                 DateEvent dateEvent = new DateEvent();
                 var films = new List<Film>();
-                foreach (XElement element in xDateEvent.Element("movies")?.Elements("movie")) 
+                foreach (XElement element in xDateEvent.Element("movies")?.Elements("movie"))
                 {
                     Film movie = new Film();
                     movie.Id = Convert.ToInt32(element.FirstAttribute?.Value ?? "-1");
@@ -107,11 +108,11 @@ namespace CinemaPoster.Repository
                     foreach (XElement movieStart in element.Element("sessions")?.Elements("session"))
                     {
                         movie.Time.Add(ToDateTime(movieStart.FirstAttribute?.Value ?? "-1"));
-                        
+
                     }
                     films.Add(movie);
                 }
-                dateEvent.FilmSchedule = Convert.ToDateTime(xDateEvent.FirstAttribute?.Value);
+                dateEvent.FilmSchedule = Convert.ToDateTime(xDateEvent.FirstAttribute?.Value, CultureInfo.GetCultureInfo("ru-RU"));
                 dateEvent.Films = films;
                 return dateEvent;
             }

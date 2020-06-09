@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dates>
+  <date value="14.06.2020">
+    <movies>
+       <movie id="1" name="Власть">
+        <sessions>
+          <session time="10:30" />
+          <session time="19:00" />
+        </sessions>
+      </movie>
+      <movie id="2" name="Стекло">
+        <sessions>
+          <session time="10:00" />
+        </sessions>
+      </movie>
+    </movies>
+  </date>
+  <date value="14.09.2020">
+    <movies>
+      <movie id="3" name="Власть">
+        <sessions>
+          <session time="10:30" />
+          <session time="19:00" />
+        </sessions>
+      </movie>
+      <movie id="4" name="Лего фильм 2">
+        <sessions>
+          <session time="15:15" />
+          <session time="18:10" />
+          <session time="20:20" />
+        </sessions>
+      </movie>
+      <movie id="5" name="Зеленая книга">
+        <sessions>
+          <session time="11:30" />
+          <session time="16:45" />
+        </sessions>
+      </movie>
+    </movies>
+	</date>
+	<date value="19.09.2020">
+    <movies>
+      <movie id="6" name="Власть">
+        <sessions>
+          <session time="11:30" />
+        </sessions>
+      </movie>
+      <movie id="7" name="Лего фильм 2">
+        <sessions>
+          <session time="13:25" />
+          <session time="17:20" />
+        </sessions>
+      </movie>
+      <movie id="8" name="Зеленая книга">
+        <sessions>
+          <session time="12:00" />
+          <session time="17:00" />
+        </sessions>
+      </movie>
+    </movies>
+  </date>
+  <date value="20.09.2020">
+    <movies>
+      <movie id="9" name="Человек паук">
+        <sessions>
+          <session time="10:30" />
+		  <session time="18:40" />
+        </sessions>
+      </movie>
+      <movie id="10" name="Возмездие">
+        <sessions>
+          <session time="14:40" />
+          <session time="17:20" />
+        </sessions>
+      </movie>
+      <movie id="11" name="Прятки">
+        <sessions>
+          <session time="11:00" />
+          <session time="17:00" />
+        </sessions>
+      </movie>
+    </movies>
+  </date>
+</dates>

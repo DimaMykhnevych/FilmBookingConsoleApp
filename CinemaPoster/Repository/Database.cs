@@ -11,7 +11,7 @@ namespace CinemaPoster.Repository
         private static XDocument doc;
 
         //Путь к Xml-документу.
-        private static string _filePath = @"db.xml";
+        private static string _filePath = "..//..//..//db.xml";
 
         //Корневой элемент Xml-документа.
         private static XElement Root;

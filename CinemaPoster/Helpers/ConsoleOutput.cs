@@ -1,6 +1,7 @@
 ﻿using CinemaPoster.Entities;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace CinemaPoster.Helpers
 {
@@ -13,8 +14,7 @@ namespace CinemaPoster.Helpers
             int filmDatesCounter = 0;
             foreach (var daySchedule in dateEvents)
             {
-                string[] date = daySchedule.FilmSchedule.ToLongDateString().Split(' ');
-                Console.WriteLine(date[0] + " " + date[1] + " " +
+                Console.WriteLine(daySchedule.FilmSchedule.Day + " " + ToMonthName(daySchedule.FilmSchedule) + " " +
                     $"({ Converter.DaysConverter(daySchedule.FilmSchedule.DayOfWeek.ToString())})");
                 foreach (var film in daySchedule.Films)
                 {
@@ -61,6 +61,11 @@ namespace CinemaPoster.Helpers
             Console.WriteLine("2. Список забронированных сеансов");
             Console.WriteLine();
             Console.Write(">");
+        }
+
+        private static string ToMonthName(DateTime dateTime)
+        {
+            return CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(dateTime.Month);
         }
     }
 }

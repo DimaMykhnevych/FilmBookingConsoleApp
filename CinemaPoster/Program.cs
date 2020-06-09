@@ -2,10 +2,6 @@
 using CinemaPoster.Helpers;
 using CinemaPoster.Repository;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CinemaPoster
 {
@@ -18,8 +14,8 @@ namespace CinemaPoster
         }
         static void Main(string[] args)
         {
-            Console.BackgroundColor = ConsoleColor.DarkGray;
-            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.Clear();
             var newl = DataBase.Get();
             ConsoleOutput.XmlDocConsoleOutput(newl);

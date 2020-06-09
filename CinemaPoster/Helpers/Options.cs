@@ -2,6 +2,7 @@
 using CinemaPoster.Repository;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
 namespace CinemaPoster.Helpers
@@ -18,7 +19,7 @@ namespace CinemaPoster.Helpers
             Console.Write("Введите дату на которую хотите забронировать фильм в виде \"число.месяц\": ");
             try
             {
-                date = Convert.ToDateTime(Console.ReadLine());
+                date = Convert.ToDateTime(Console.ReadLine(), CultureInfo.GetCultureInfo("ru-RU"));
                 Console.Write("Введите время на которое хотите забронировать фильм в виде \"часы:минуты\": ");
                 time = ToDateTime(Console.ReadLine());
                 Console.Write("Введите название фильма: ");
@@ -58,7 +59,7 @@ namespace CinemaPoster.Helpers
         }
         public static DateTime ToDateTime(string time)
         {
-            return Convert.ToDateTime("01/01/1800 " + time + ":00.00");
+            return Convert.ToDateTime("01/01/1800 " + time + ":00.00", CultureInfo.GetCultureInfo("ru-RU"));
         }
     }
 }

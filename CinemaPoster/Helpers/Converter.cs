@@ -1,9 +1,4 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace CinemaPoster.Helpers
 {
@@ -20,8 +15,7 @@ namespace CinemaPoster.Helpers
                 { "Sunday", "ВС"}
             };
         public static string DaysConverter(string engWeekDay)
-        {
-          
+        {          
             return dictionary[engWeekDay];
         }
     }
